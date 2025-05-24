@@ -1,0 +1,47 @@
+personal blog 
+[ CLIENT (Frontend) ]
+    |
+    v
+[ SERVER (Backend/API) ]
+    |
+    v
+[ DATABASE ]
+
+🎨 Frontend (Client-Side)
+	•	Purpose: Displays blog posts, lets users read/create/edit posts
+	•	Tools: HTML, CSS, JavaScript (React, Vue, or plain)
+	•	Pages:
+	•	Home page → list of blog posts
+	•	Post detail page → full content
+	•	Admin/Create page → form to write or edit posts
+	•	API Requests: Uses fetch() or Axios to call the backend
+
+⸻
+
+🔧 Backend (Server/API Layer)
+	•	Purpose: Handles business logic, routes, and database interaction
+	•	Tools: Node.js + Express (or Flask, Django, etc.)
+	•	Routes:
+	•	GET /posts → fetch all posts
+	•	GET /posts/:id → fetch single post
+	•	POST /posts → create a new post
+	•	PUT /posts/:id → update post
+	•	DELETE /posts/:id → delete post
+	•	Handles: Authentication (if needed), input validation, error handling
+
+⸻
+
+💾 Database (Data Layer)
+	•	Purpose: Stores blog posts and (optional) user data
+	•	Tools: PostgreSQL, MongoDB, MySQL, SQLite
+	•	Tables/Collections:
+	•	posts → id, title, content, author, date
+	•	users (optional) → id, username, email, password
+
+⸻
+
+🚀 Flow Example (Creating a Post):
+	1.	User fills form on frontend → hits POST /posts
+	2.	Backend receives it, validates, saves to DB
+	3.	Backend responds with success
+	4.	Frontend shows the new post in the list

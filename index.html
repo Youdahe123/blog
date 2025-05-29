@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+  </head>
+  <body class="bg-[#F9F6EE]">
+    <h1 class=" gap-2 text-gray-800 mt-5  ml-20 text-xl font-bold text-right flex justify-right items-right gap-2">
+      Youdahe Asfaw <p class="text-xs">(picture isnt blurry hover over it!)</p></h1>
+      <div class="flex justify-end mt-8 mr-20">
+      <img class=" cursor-pointer  duration-300 blur-sm hover:blur-none w-[32rem] h-[32rem] rounded-full object-cover object-top mt-8" src="public/profilepic.JPG" alt="">
+      </div>
+      <ul class=" absolute top-8 right-20 flex gap-20">
+        <li class="mr-6">
+          <button onclick="AboutPage()" class=" cursor-pointer text-gray-500 hover:text-gray-800">About</button>
+        </li>
+        <li class="mr-6">
+          <button onclick="BlogPage()" class="cursor-pointer text-gray-500 hover:text-gray-800">Blog</button>
+        </li>
+        <li class="mr-6">
+          <button onclick="ContactPage()" class=" cursor-pointer  text-gray-500 hover:text-gray-800">Contact</button>
+        </li>
+      </ul>
+      <!-- <img class="w-32 h-auto" src="public/social-media.gif" alt=""> -->
+    <!-- <img id="pfp" alt="profile picture"> -->
+     <!--<p id="name" class="text-xl e-500/100"></p>
+     <p id="bio" class="text-xl"></p>
+     <p id="post" class="text-xl"></p>
+     <p id="title" class="text-xl"></p><br>
+     <p id="content" class="text-xl"></p>
+     <p id="date" class="text-xl"></p>
+     <p id="tags" class="text-xl"></p>-->
+     <div class="ml-20 -mt-96">
+     <h2 class="text-5xl lg:text-6xl xl:text-6xl font-bold lg:tracking-tight xl:tracking-tighter">Full-Stack Software Engineer</h2>
+     <p class=" text-5xl lg:text-6xl xl:text-6xl font-bold lg:tracking-tight xl:tracking-tighter"> Youdahe Asfaw 
+      <a href="https://github.com/Youdahe123" target="_blank" rel="noopener noreferrer"><img class="w-10 h-10" src="public/github-mark.svg" alt=""></a>
+     </p>
+     <p><br>
+I’ve been into coding since late 2023 and really enjoy building things that help people.<br>
+I’m especially interested in accessible tech and data-driven tools.<br>
+Experience in software development, research, and mentorship</p>
+     <section class="mt-[60rem] flex flex-col " id="About">
+      <h2 class=" mt-8 ml-20 gap-20 text-5xl lg:text-6xl xl:text-6xl font-bold lg:tracking-tight xl:tracking-tighter">About</h2>
+      <p>About Info </p>
+     </section>
+
+
+     <section class="mt-[60rem] flex flex-col " id="Blog">
+      <h2 class="ml-20 gap-20 text-5xl lg:text-6xl xl:text-6xl font-bold lg:tracking-tight xl:tracking-tighter">Blog</h2>
+      <p>Blog Stuff </p>
+     </section>
+
+     <section class="mt-[60rem] flex flex-col " id="Contact">
+      <h2 class="ml-20 gap-20 text-5xl lg:text-6xl xl:text-6xl font-bold lg:tracking-tight xl:tracking-tighter">Contact</h2>
+      <p>Contact Stuff </p>
+     </section>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

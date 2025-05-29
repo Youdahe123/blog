@@ -3,6 +3,7 @@ import {user} from './data/user';
 import { posts } from './data/posts';
 let p = 0
 let count = 0
+const AboutShow = document.getElementById('About')
 //Block Content
 // //document.getElementById('pfp').src = user[0].pfp;
 // document.getElementById('name').textContent = user[0].name;
@@ -19,18 +20,18 @@ let count = 0
 
 function Menu(){
     const arrow = document.querySelector('#arrow img');
-    if(count == 0){
-        arrow.src = 'public/angle-down.png'
-        count++
-    }
-    if(count%2 == 1){
+    count++;
+    if(count%2 == 0){
         arrow.src = 'public/angle-right (1).png'
-        count++
+        AboutShow.style.display = 'none'
     }else{
         arrow.src = 'public/angle-down.png'
-        count++
+        AboutShow.style.display = 'block'
     }
+    
 }
 window.Menu = Menu;
+
+
 
 

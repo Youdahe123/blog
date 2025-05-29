@@ -7,18 +7,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
   </head>
-  <body>
-    <h1 class=" mt-20  ml-20 text-5xl font-bold text-right flex justify-right items-right gap-2">
-      <button id="arrow" onclick="Menu()"><img class="w-5 h-5 font-bold"  src="public/angle-right (1).png" alt=""></button>
-      Home</h1>
-      <button class="ml-20 mt-5"   id="About" style="display: none;">
-      <img 
-      src="public/gif.png" 
-      alt=""
-      class="w-20 h-auto transition duration-300 cursor-pointer;"
-      onmouseover="this.src = 'public/social-media.gif'"
-      onmouseout="this.src= 'public/gif.png'">
-      </button>
+  <body class="bg-[#F9F6EE]">
+    <h1 class=" gap-2 text-gray-800 mt-5  ml-20 text-xl font-bold text-right flex justify-right items-right gap-2">
+      Youdahe Asfaw <p class="text-xs">(picture isnt blurry hover over it!)</p></h1>
+      <div class="flex justify-end mt-8 mr-20">
+      <img class=" cursor-pointer  duration-300 blur-sm hover:blur-none w-[32rem] h-[32rem] rounded-full object-cover object-top mt-8" src="public/profilepic.JPG" alt="">
+      </div>
+      <ul class=" absolute top-8 right-20 flex gap-20">
+        <li class="mr-6">
+          <a class="text-gray-500 hover:text-gray-800" href="#">About</a>
+        </li>
+        <li class="mr-6">
+          <a class="text-gray-500 hover:text-gray-800" href="#">Contact</a>
+        </li>
+        <li class="mr-6">
+          <a class="text-gray-500 hover:text-gray-800" href="#">Blog</a>
+        </li>
+      </ul>
       <!-- <img class="w-32 h-auto" src="public/social-media.gif" alt=""> -->
     <!-- <img id="pfp" alt="profile picture"> -->
      <!--<p id="name" class="text-xl e-500/100"></p>
@@ -28,6 +33,9 @@
      <p id="content" class="text-xl"></p>
      <p id="date" class="text-xl"></p>
      <p id="tags" class="text-xl"></p>-->
+     <div class="ml-20 md:-mt-96">
+     <h2 class="text-5xl lg:text-6xl xl:text-6xl font-bold lg:tracking-tight xl:tracking-tighter">Full-Stack Software Engineer</h2>
+     </div>
 
     <script type="module" src="/src/main.js"></script>
   </body>

@@ -36,28 +36,36 @@ function Menu(){
 }
 function PostDown() {
     const postContent = document.getElementById('postContent');
+  postContent.classList.remove('opacity-100');
   postContent.classList.add('opacity-0');
+
   setTimeout(() => {
-    p = (p + 1) % posts.length; // Loop to first post if at end
+    p = (p + 1) % posts.length;
     updatePostContent();
     postContent.classList.remove('opacity-0');
+    postContent.classList.add('opacity-100');
   }, 300);
 }
 function PostUp(){
-    if(p == 0){
-        Error('no more posts')
-    }else{
-    const postContent = document.getElementById('postContent')
-    postContent.classList.add('opacity-0');
-    setTimeout(() => {
-    p = (p - 1 + posts.length) % posts.length; // Loop to last post if at start
+    if (p === 0) {
+    console.warn('No more posts');
+    return;
+  }
+
+  const postContent = document.getElementById('postContent');
+  postContent.classList.remove('opacity-100');
+  postContent.classList.add('opacity-0');
+
+  setTimeout(() => {
+    p = (p - 1 + posts.length) % posts.length;
     updatePostContent();
     postContent.classList.remove('opacity-0');
-    }, 300);
-    }
+    postContent.classList.add('opacity-100');
+  }, 300);
 }
     
 function updatePostContent(){
+    console.log('clicked')
     document.getElementById('title').textContent = posts[p].title;
   document.getElementById('post').textContent = `Post Counter: ${posts[p].id}`;
   document.getElementById('content').textContent = posts[p].content;

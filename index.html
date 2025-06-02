@@ -52,14 +52,41 @@ I’ve also been gaming since I was a kid — <strong>Minecraft</strong> was my 
 
 
      <section class="mt-[60rem] flex flex-col " id="Blog">
-      <h2 class="ml-20 gap-20 text-5xl lg:text-6xl xl:text-6xl font-bold lg:tracking-tight xl:tracking-tighter">Blog</h2>
-     <p id="name" class="text-xl e-500/100"></p>
-     <p id="bio" class="text-xl"></p>
+      <h2 class="mt-8 ml-20 gap-20 text-5xl lg:text-6xl xl:text-6xl font-bold lg:tracking-tight xl:tracking-tighter">Blog</h2>
+      <div class="flex items-center gap-4 mt-12">
+      <img id="Pfp" class="w-40 h-40 rounded-full object-cover object-[center_10%]" alt="Profile Picture">
+      <div class="flex-col">
+     <p id="name" class="text-2xl e-500/100"></p>
+     <p id="bio" class="text-2xl"></p>
+     </div>
+        </div>
+        <div id="postContent" class="transition-opacity duration-300 opacity-100">
+        <p  id="date" class="text-xl"></p>
      <p id="post" class="text-xl"></p>
-     <p id="title" class="text-xl"></p><br>
-     <p id="content" class="text-xl"></p>
-     <p id="date" class="text-xl"></p>
-     <p id="tags" class="text-xl"></p>
+     <h1 class="text-4xl font-bold" id="title" class="text-xl"></h1><br>
+     <p class="text-2xl" id="content" class="text-xl"></p>
+
+     <button class=" mt-8 text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-full text-sm px-2.5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"><p id="tags" class="text-xl"></p></button>
+     </div>
+     <div class="relative">
+     <div class=" flex flex-col">
+     <button onclick="PostUp()" id="PostUp" class=" -top-64 absolute w-fit self-start inline-flex items-center p-0 m-0 cursor-pointer bg-transparent border-0 leading-none -ml-20 -mt-28">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-10 h-10">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 6.75 12 3m0 0 3.75 3.75M12 3v18" />
+</svg>
+</button>
+</div>
+</div>
+
+<div class="relative">
+  <div class="flex flex-col">
+<button onclick="PostDown()"  class="mt-8 w-fit self-start inline-flex items-center p-0 m-0 cursor-pointer bg-transparent border-0 leading-none -ml-20 -mt-20">
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-10 h-10">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 17.25 12 21m0 0-3.75-3.75M12 21V3" />
+</svg>
+</button>
+</div>
+</div>
      </section>
 
      <section class="mt-[60rem] flex flex-col " id="Contact">

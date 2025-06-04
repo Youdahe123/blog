@@ -65,34 +65,57 @@ I’ve also been gaming since I was a kid — <strong>Minecraft</strong> was my 
      <p id="post" class="text-xl"></p>
      <h1 class="text-4xl font-bold" id="title"></h1><br>
      <p class="text-2xl" id="content" class="text-xl"></p>
-
+    
+      
      <button class=" mt-8 text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-full text-sm px-2.5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"><p id="tags" class="text-xl"></p></button>
      </div>
      <div class="relative">
      <div class=" flex flex-col">
-     <button onclick="PostUp()" id="PostUp" class=" -top-64 absolute w-fit self-start inline-flex items-center p-0 m-0 cursor-pointer bg-transparent border-0 leading-none -ml-20 -mt-28">
+     <button onclick="PostUp()" id="PostUp" class=" -top-64 absolute w-fit self-start inline-flex items-center p-0 m-0 cursor-pointer bg-transparent border-0 leading-none -ml-20 -mt-32">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-10 h-10">
   <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 6.75 12 3m0 0 3.75 3.75M12 3v18" />
 </svg>
 </button>
 </div>
 </div>
-
+<div></div>
 <div class="relative">
   <div class="flex flex-col">
-<button onclick="PostDown()"  class="mt-8 w-fit self-start inline-flex items-center p-0 m-0 cursor-pointer bg-transparent border-0 leading-none -ml-20 -mt-32`">
-  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-10 h-10">
+    <button onclick="PostDown()"  class="absolute mt-8 w-fit self-start inline-flex items-center p-0 m-0 cursor-pointer bg-transparent border-0 leading-none -ml-20 -mt-40">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-10 h-10">
   <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 17.25 12 21m0 0-3.75-3.75M12 21V3" />
 </svg>
 </button>
-</div>
+  </div>
 </div>
      </section>
 
-     <section class="mt-[60rem] flex flex-col " id="Contact">
-      <h2 class="ml-20 gap-20 text-5xl lg:text-6xl xl:text-6xl font-bold lg:tracking-tight xl:tracking-tighter">Contact</h2>
-      <p>Contact Stuff </p>
-     </section>
+     <!-- Contact Section -->
+<section class="mt-[60rem] flex flex-col items-center" id="Contact">
+  <h2 class="mb-8 text-5xl lg:text-6xl xl:text-6xl font-bold tracking-tight text-gray-800">Contact</h2>
+  <div class="flex items-center gap-4 mb-8">
+    <!-- LinkedIn Icon -->
+    <a href="https://www.linkedin.com/in/youdaheasfaw/" target="_blank" rel="noopener noreferrer"
+      class="cursor-pointer hover:scale-110 transition-transform duration-200">
+      <!-- Replace with your LinkedIn SVG or use an <img> -->
+      <svg class="w-10 h-10 text-blue-700" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-9h3v9zm-1.5-10.29c-.97 0-1.75-.79-1.75-1.76s.78-1.75 1.75-1.75 1.75.78 1.75 1.75-.78 1.76-1.75 1.76zm13.5 10.29h-3v-4.5c0-1.08-.02-2.47-1.5-2.47-1.5 0-1.73 1.17-1.73 2.39v4.58h-3v-9h2.89v1.23h.04c.4-.76 1.38-1.56 2.84-1.56 3.04 0 3.6 2 3.6 4.59v4.74z"/>
+      </svg>
+    </a>
+    <span class="text-gray-500 text-lg">Connect with me on LinkedIn!</span>
+  </div>
+  <form id="form" class=" block bg-white rounded-xl shadow p-8 w-full max-w-lg flex flex-col gap-4">
+    <input type="text" placeholder="Your Name" class="border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-200" required>
+    <input type="email" placeholder="Your Email" class="border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-200" required>
+    <textarea placeholder="Your Message" rows="5" class="border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-200 resize-none" required></textarea>
+    <button type="submit" class="self-end bg-blue-700 text-white px-6 py-2 rounded-full font-semibold hover:bg-blue-800 transition">Send</button>
+  </form>
+</section>
+
+<!-- Footer -->
+<footer class="w-full mt-24 py-8 bg-[#F9F6EE] text-center text-gray-400 text-sm border-t border-gray-200">
+  &copy; 2025 Youdahe Asfaw
+</footer>
 
     <script type="module" src="/src/main.js"></script>
   </body>

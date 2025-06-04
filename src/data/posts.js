@@ -17,7 +17,7 @@ In short: AI friends might help in some cases, but they’re no substitute for b
 While some see this as an overreaction, others argue that the Trump brand — often associated with nationalism and polarization — clashes with Harvard’s reputation for academic freedom and global diversity.\n
 I see both sides. On one hand, universities should be open to a spectrum of views, including conservative ones. But international students are right to care how their degree — and by extension, their future — is perceived abroad.\n
 This isn't just about Trump or Harvard. It’s about how leadership, even symbolic, affects the credibility of institutions that claim to stand for knowledge, openness, and global cooperation.`,
-    date: "5/25/2025",
+    date: "5/30/2025",
     tags: ["Politics", "Education", "Global"],
   },
   {

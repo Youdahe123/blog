@@ -1,108 +1,151 @@
-<!-- CHANGED -->
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <title>Youdahe Asfaw | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .face {
+        width: 180px;
+        height: 180px;
+        background: #ffe0b2;
+        border-radius: 50%;
+        position: relative;
+        margin: 0 auto;
+        box-shadow: 0 4px 24px 0 #e0c3a0;
+      }
+      .eye {
+        width: 40px;
+        height: 40px;
+        background: #fff;
+        border-radius: 50%;
+        position: absolute;
+        top: 60px;
+        box-shadow: 0 2px 8px #e0c3a0;
+        overflow: hidden;
+      }
+      .eye.left { left: 40px; }
+      .eye.right { right: 40px; }
+      .pupil {
+        width: 18px;
+        height: 18px;
+        background: #222;
+        border-radius: 50%;
+        position: absolute;
+        top: 11px;
+        left: 11px;
+        transition: all 0.1s;
+      }
+      .smile {
+        position: absolute;
+        bottom: 38px;
+        left: 50%;
+        width: 48px;
+        height: 18px;
+        border-bottom: 20px solid #d97706; /* Thicker smile */
+        border-radius: 0 0 48px 48px;
+        transform: translateX(-50%);
+        background: none;
+      }
+      .brow {
+        position: absolute;
+        width: 32px;
+        height: 8px;
+        background: #d97706;
+        border-radius: 8px;
+        top: 38px;
+      }
+      .brow.left { left: 32px; transform: rotate(-12deg);}
+      .brow.right { right: 32px; transform: rotate(12deg);}
+    </style>
   </head>
-  <body class="bg-[#F9F6EE]">
-    <h1 class=" gap-2 text-gray-800 mt-5  ml-20 text-xl font-bold text-right flex justify-right items-right gap-2">
-      Youdahe Asfaw <p class="text-xs">(picture isnt blurry hover over it!)</p></h1>
-      <div class="flex justify-end mt-8 mr-20">
-      <img class=" cursor-pointer  duration-300 blur-sm hover:blur-none w-[32rem] h-[32rem] rounded-full object-cover object-top mt-8" src="public/profilepic.JPG" alt="">
+  <body class="bg-gradient-to-br from-orange-50 via-yellow-50 to-amber-100 min-h-screen text-gray-800">
+    <section class="flex flex-col items-center justify-center min-h-[60vh] pt-16">
+      <div class="face relative">
+        <div class="brow left"></div>
+        <div class="brow right"></div>
+        <div class="eye left"><div class="pupil" id="pupil-left"></div></div>
+        <div class="eye right"><div class="pupil" id="pupil-right"></div></div>
+        <div class="smile"></div>
       </div>
-      <ul class=" absolute top-8 right-20 flex gap-20">
-        <li class="mr-6">
-          <button onclick="AboutPage()" class=" cursor-pointer text-gray-500 hover:text-gray-800">About</button>
-        </li>
-        <li class="mr-6">
-          <button onclick="BlogPage()" class="cursor-pointer text-gray-500 hover:text-gray-800">Blog</button>
-        </li>
-        <li class="mr-6">
-          <button onclick="ContactPage()" class=" cursor-pointer  text-gray-500 hover:text-gray-800">Contact</button>
-        </li>
-      </ul>
-     <div class="ml-20 -mt-96">
-     <h2 class="text-5xl lg:text-6xl xl:text-6xl font-bold lg:tracking-tight xl:tracking-tighter">Full-Stack Software Engineer</h2>
-     <p class=" text-5xl lg:text-6xl xl:text-6xl font-bold lg:tracking-tight xl:tracking-tighter"> Youdahe Asfaw 
-      <a href="https://github.com/Youdahe123" target="_blank" rel="noopener noreferrer"><img class="w-10 h-10" src="public/github-mark.svg" alt=""></a>
-     </p>
-     <p><br>
-I’ve been into coding since late 2023 and really enjoy building things that help people.<br>
-I’m especially interested in accessible tech and data-driven tools.<br>
-Experience in software development, research, and mentorship</p>
-     <section class="mt-[60rem] flex flex-col " id="About">
-      <h2 class=" mt-8 ml-20 gap-20 text-5xl lg:text-6xl xl:text-6xl font-bold lg:tracking-tight xl:tracking-tighter">About</h2>
-      <img class="shadow-xl dark:shadow-gray-800 max-w-lg h-auto ms-auto mr-16 rounded-lg transition duration-1000 hover:scale-105" src="public/IMG_2179.jpeg" alt="">
-      <p class="md:-mt-64">Hi, I’m <strong>Youdahe Asfaw</strong> — a CS student and developer who loves turning ideas into code.<br><br>
-
-I enjoy building full-stack apps, exploring data, and solving real-world problems with clean, efficient tech.<br><br>
-
-In my free time, I’m usually playing basketball, watching anime, or hanging out with friends.<br><br>
-
-I was born in Ethiopia and raised in Minneapolis, and I’m proud to be a first-generation college student <br>carving my own path in tech.<br><br>
-
-I’ve also been gaming since I was a kid — <strong>Minecraft</strong> was my favorite growing up. It’s where I <br>first discovered how fun building things could be!<br><br>
-
-
+      <h1 class="mt-8 text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-orange-700 text-center drop-shadow-lg">
+        Hi, I'm Youdahe Asfaw
+      </h1>
+      <p class="mt-4 text-lg sm:text-xl max-w-xl text-center text-gray-600">
+        Full-Stack Software Engineer, CS student, and developer who loves turning ideas into code.<br>
+        <span class="text-orange-500">Scroll down to see my work!</span>
+      </p>
+      <div class="mt-6 flex gap-4">
+        <a href="https://github.com/Youdahe123" target="_blank" rel="noopener noreferrer">
+          <img class="w-10 h-10 hover:scale-110 transition" src="public/github-mark.svg" alt="GitHub">
+        </a>
+        <a href="https://www.linkedin.com/in/youdaheasfaw/" target="_blank" rel="noopener noreferrer">
+          <svg class="w-10 h-10 text-blue-700 hover:scale-110 transition" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-9h3v9zm-1.5-10.29c-.97 0-1.75-.79-1.75-1.76s.78-1.75 1.75-1.75 1.75.78 1.75 1.75-.78 1.76-1.75 1.76zm13.5 10.29h-3v-4.5c0-1.08-.02-2.47-1.5-2.47-1.5 0-1.73 1.17-1.73 2.39v4.58h-3v-9h2.89v1.23h.04c.4-.76 1.38-1.56 2.84-1.56 3.04 0 3.6 2 3.6 4.59v4.74z"/>
+          </svg>
+        </a>
+      </div>
     </section>
-
-
-     <section class="mt-[60rem] flex flex-col " id="Blog">
-      <h2 class="mt-8 ml-20 gap-20 text-5xl lg:text-6xl xl:text-6xl font-bold lg:tracking-tight xl:tracking-tighter">Blog</h2>
-      <div class="flex items-center gap-4 mt-12">
-      <img id="Pfp" class="w-40 h-40 rounded-full object-cover object-[center_10%]" alt="Profile Picture">
-      <div class="flex-col">
-     <p id="name" class="text-2xl e-500/100"></p>
-     <p id="bio" class="text-2xl"></p>
-     </div>
+    <section class="mt-24 flex flex-col items-center" id="About">
+      <h2 class="text-4xl sm:text-5xl font-bold text-orange-700 mb-6">About</h2>
+      <div class="flex flex-col md:flex-row items-center gap-8">
+        <img class="shadow-xl max-w-xs h-auto rounded-lg transition duration-700 hover:scale-105" src="public/IMG_2179.jpeg" alt="About Youdahe">
+        <div class="max-w-xl text-lg text-gray-700 leading-relaxed">
+          <p>
+            Hi, I’m <strong>Youdahe Asfaw</strong> — a CS student and developer who loves turning ideas into code.<br><br>
+            I enjoy building full-stack apps, exploring data, and solving real-world problems with clean, efficient tech.<br><br>
+            In my free time, I’m usually playing basketball, watching anime, or hanging out with friends.<br><br>
+            I was born in Ethiopia and raised in Minneapolis, and I’m proud to be a first-generation college student carving my own path in tech.<br><br>
+            I’ve also been gaming since I was a kid — <strong>Minecraft</strong> was my favorite growing up. It’s where I first discovered how fun building things could be!
+          </p>
         </div>
-        <div id="postContent" class="transition-opacity duration-300 opacity-100">
-        <p  id="date" class="text-xl"></p>
-     <p id="post" class="text-xl"></p>
-     <h1 class="text-4xl font-bold" id="title"></h1><br>
-     <p class="text-2xl" id="content" class="text-xl"></p>
-    
-      
-     <button class=" mt-8 text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-full text-sm px-2.5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"><p id="tags" class="text-xl"></p></button>
-     </div>
-<div></div>
-
-    <button onclick="PostDown()"  class="absolute mt-8 w-fit self-start inline-flex items-center p-0 m-0 cursor-pointer bg-transparent border-0 leading-none -ml-20 -mt-40">
-      <img class=" md-mt-32 ml-16  h-10 w-10" src="public/next.svg" alt="">
-</button>
-     </section>
-
-     <!-- Contact Section -->
-<section class="mt-[60rem] flex flex-col items-center" id="Contact">
-  <h2 class="mb-8 text-5xl lg:text-6xl xl:text-6xl font-bold tracking-tight text-gray-800">Contact</h2>
-  <div class="flex items-center gap-4 mb-8">
-    <!-- LinkedIn Icon -->
-    <a href="https://www.linkedin.com/in/youdaheasfaw/" target="_blank" rel="noopener noreferrer"
-      class="cursor-pointer hover:scale-110 transition-transform duration-200">
-      <!-- Replace with your LinkedIn SVG or use an <img> -->
-      <svg class="w-10 h-10 text-blue-700" fill="currentColor" viewBox="0 0 24 24">
-        <path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-9h3v9zm-1.5-10.29c-.97 0-1.75-.79-1.75-1.76s.78-1.75 1.75-1.75 1.75.78 1.75 1.75-.78 1.76-1.75 1.76zm13.5 10.29h-3v-4.5c0-1.08-.02-2.47-1.5-2.47-1.5 0-1.73 1.17-1.73 2.39v4.58h-3v-9h2.89v1.23h.04c.4-.76 1.38-1.56 2.84-1.56 3.04 0 3.6 2 3.6 4.59v4.74z"/>
-      </svg>
-    </a>
-    <span class="text-gray-500 text-lg">Connect with me on LinkedIn!</span>
-  </div>
-  <form id="form" class=" block bg-white rounded-xl shadow p-8 w-full max-w-lg flex flex-col gap-4">
-    <input type="text" placeholder="Your Name" class="border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-200" required>
-    <input type="email" placeholder="Your Email" class="border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-200" required>
-    <textarea placeholder="Your Message" rows="5" class="border border-gray-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-200 resize-none" required></textarea>
-    <button type="submit" class="self-end bg-blue-700 text-white px-6 py-2 rounded-full font-semibold hover:bg-blue-800 transition">Send</button>
-  </form>
-</section>
-
-<!-- Footer -->
-<footer class="w-full mt-24 py-8 bg-[#F9F6EE] text-center text-gray-400 text-sm border-t border-gray-200">
-  &copy; 2025 Youdahe Asfaw
-</footer>
-
+      </div>
+    </section>
+    <section class="mt-32 flex flex-col" id="Blog">
+      <h2 class="mt-8 ml-4 md:ml-20 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-orange-700">Blog</h2>
+      <div class="flex flex-col sm:flex-row items-center gap-4 mt-8 sm:mt-12 px-4 sm:px-0">
+        <img src="./public/image.png" class="w-24 h-24 sm:w-40 sm:h-40 rounded-full object-cover object-[center_10%] border-4 border-orange-200 shadow-lg" alt="Profile Picture">
+        <div class="flex flex-col items-center sm:items-start">
+          <p id="name" class="text-lg sm:text-2xl text-orange-800 font-semibold"></p>
+          <p id="bio" class="text-base sm:text-2xl text-gray-600"></p>
+        </div>
+      </div>
+      <div id="postsList" class="mt-8 sm:mt-12 flex flex-col gap-8 sm:gap-12 px-2 sm:px-8 max-h-[32rem] sm:max-h-[40rem] overflow-y-auto w-full"></div>
+    </section>
+    <section class="mt-32 flex flex-col items-center px-4" id="Contact">
+      <h2 class="mb-8 text-3xl sm:text-5xl md:text-6xl font-bold tracking-tight text-orange-700">Contact</h2>
+      <form id="form" class="bg-white rounded-xl shadow-xl p-4 sm:p-8 w-full max-w-md flex flex-col gap-4 border border-orange-100">
+        <input id="contact-name" autocomplete="on" type="text" placeholder="Your Name" class="border border-orange-200 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-orange-200" required>
+        <input id="contact-email" autocomplete="on" type="email" placeholder="Your Email" class="border border-orange-200 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-orange-200" required>
+        <textarea id="contact-message" placeholder="Your Message" rows="5" class="border border-orange-200 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-orange-200 resize-none" required></textarea>
+        <button type="submit" class="self-end bg-orange-600 text-white px-6 py-2 rounded-full font-semibold hover:bg-orange-700 transition">Send</button>
+      </form>
+    </section>
+    <footer class="w-full mt-16 py-6 bg-orange-50 text-center text-gray-400 text-xs sm:text-sm border-t border-orange-200">
+      &copy; 2025 Youdahe Asfaw
+    </footer>
     <script type="module" src="/src/main.js"></script>
+    <script>
+      document.addEventListener('mousemove', (e) => {
+        const face = document.querySelector('.face');
+        if (!face) return;
+        const rect = face.getBoundingClientRect();
+        const centerX = rect.left + rect.width / 2;
+        const centerY = rect.top + rect.height / 2;
+        const dx = e.clientX - centerX;
+        const dy = e.clientY - centerY;
+        const angle = Math.atan2(dy, dx);
+        const radius = 8;
+        const pupilLeft = document.getElementById('pupil-left');
+        const pupilRight = document.getElementById('pupil-right');
+        if (pupilLeft && pupilRight) {
+          pupilLeft.style.transform = `translate(${Math.cos(angle) * radius}px, ${Math.sin(angle) * radius}px)`;
+          pupilRight.style.transform = `translate(${Math.cos(angle) * radius}px, ${Math.sin(angle) * radius}px)`;
+        }
+      });
+    </script>
   </body>
 </html>

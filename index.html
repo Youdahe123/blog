@@ -2,95 +2,41 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Youdahe Asfaw | Portfolio</title>
-    <link rel="stylesheet" href="style.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-      .face {
-        width: 180px;
-        height: 180px;
-        background: #ffe0b2;
-        border-radius: 50%;
-        position: relative;
-        margin: 0 auto;
-        box-shadow: 0 4px 24px 0 #e0c3a0;
-      }
-      .eye {
-        width: 40px;
-        height: 40px;
-        background: #fff;
-        border-radius: 50%;
-        position: absolute;
-        top: 60px;
-        box-shadow: 0 2px 8px #e0c3a0;
+      body { background: #fff; }
+      .typing {
+        border-right: 2px solid #00FFFF;
+        white-space: nowrap;
         overflow: hidden;
+        display: inline-block;
+        animation: blink-caret 0.75s step-end infinite;
       }
-      .eye.left { left: 40px; }
-      .eye.right { right: 40px; }
-      .pupil {
-        width: 18px;
-        height: 18px;
-        background: #222;
-        border-radius: 50%;
-        position: absolute;
-        top: 11px;
-        left: 11px;
-        transition: all 0.1s;
+      @keyframes blink-caret {
+        0%, 100% { border-color: #00FFFF; }
+        50% { border-color: transparent; }
       }
-      .smile {
-        position: absolute;
-        bottom: 38px;
-        left: 50%;
-        width: 48px;
-        height: 18px;
-        border-bottom: 20px solid #d97706; /* Thicker smile */
-        border-radius: 0 0 48px 48px;
-        transform: translateX(-50%);
-        background: none;
-      }
-      .brow {
-        position: absolute;
-        width: 32px;
-        height: 8px;
-        background: #d97706;
-        border-radius: 8px;
-        top: 38px;
-      }
-      .brow.left { left: 32px; transform: rotate(-12deg);}
-      .brow.right { right: 32px; transform: rotate(12deg);}
     </style>
   </head>
-  <body class="bg-gradient-to-br from-orange-50 via-yellow-50 to-amber-100 min-h-screen text-gray-800">
-    <section class="flex flex-col items-center justify-center min-h-[60vh] pt-16">
-      <div class="face relative">
-        <div class="brow left"></div>
-        <div class="brow right"></div>
-        <div class="eye left"><div class="pupil" id="pupil-left"></div></div>
-        <div class="eye right"><div class="pupil" id="pupil-right"></div></div>
-        <div class="smile"></div>
+  <body class="min-h-screen flex flex-col bg-white text-gray-800">
+    <div class="absolute top-6 right-8 flex items-center z-10">
+      <span class="text-2xl font-extrabold text-cyan-500 tracking-tight bg-cyan-50 rounded-full px-4 py-2 shadow">YA</span>
+    </div>
+    <main class="flex flex-col items-center justify-center min-h-screen">
+      <div class="flex items-center gap-4">
+        <span class="text-2xl sm:text-3xl font-bold text-gray-900">Hi, I'm Youdahe</span>
       </div>
-      <h1 class="mt-8 text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-orange-700 text-center drop-shadow-lg">
-        Hi, I'm Youdahe Asfaw
-      </h1>
-      <p class="mt-4 text-lg sm:text-xl max-w-xl text-center text-gray-600">
-        Full-Stack Software Engineer, CS student, and developer who loves turning ideas into code.<br>
-        <span class="text-orange-500">Scroll down to see my work!</span>
-      </p>
-      <div class="mt-6 flex gap-4">
-        <a href="https://github.com/Youdahe123" target="_blank" rel="noopener noreferrer">
-          <img class="w-10 h-10 hover:scale-110 transition" src="public/github-mark.svg" alt="GitHub">
-        </a>
-        <a href="https://www.linkedin.com/in/youdaheasfaw/" target="_blank" rel="noopener noreferrer">
-          <svg class="w-10 h-10 text-blue-700 hover:scale-110 transition" fill="currentColor" viewBox="0 0 24 24">
-            <path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-9h3v9zm-1.5-10.29c-.97 0-1.75-.79-1.75-1.76s.78-1.75 1.75-1.75 1.75.78 1.75 1.75-.78 1.76-1.75 1.76zm13.5 10.29h-3v-4.5c0-1.08-.02-2.47-1.5-2.47-1.5 0-1.73 1.17-1.73 2.39v4.58h-3v-9h2.89v1.23h.04c.4-.76 1.38-1.56 2.84-1.56 3.04 0 3.6 2 3.6 4.59v4.74z"/>
-          </svg>
-        </a>
+      <div class="mt-6 h-10">
+        <span id="typewriter" class="text-xl sm:text-2xl font-mono text-cyan-600 typing"></span>
       </div>
-    </section>
+      <div class="mt-16 flex flex-col items-center">
+        <p class="text-cyan-500 font-semibold">Scroll down to learn more ↓</p>
+      </div>
+    </main>
     <section class="mt-24 flex flex-col items-center" id="About">
-      <h2 class="text-4xl sm:text-5xl font-bold text-orange-700 mb-6">About</h2>
+      <h2 class="text-4xl sm:text-5xl font-bold text-cyan-500 mb-6">About</h2>
       <div class="flex flex-col md:flex-row items-center gap-8">
         <img class="shadow-xl max-w-xs h-auto rounded-lg transition duration-700 hover:scale-105" src="public/IMG_2179.jpeg" alt="About Youdahe">
         <div class="max-w-xl text-lg text-gray-700 leading-relaxed">
@@ -105,47 +51,63 @@
       </div>
     </section>
     <section class="mt-32 flex flex-col" id="Blog">
-      <h2 class="mt-8 ml-4 md:ml-20 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-orange-700">Blog</h2>
+      <h2 class="mt-8 ml-4 md:ml-20 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-cyan-500">Blog</h2>
       <div class="flex flex-col sm:flex-row items-center gap-4 mt-8 sm:mt-12 px-4 sm:px-0">
-        <img src="./public/image.png" class="w-24 h-24 sm:w-40 sm:h-40 rounded-full object-cover object-[center_10%] border-4 border-orange-200 shadow-lg" alt="Profile Picture">
+        <img src="./public/image.png" class="w-24 h-24 sm:w-40 sm:h-40 rounded-full object-cover object-[center_10%] border-4 border-cyan-200 shadow-lg" alt="Profile Picture">
         <div class="flex flex-col items-center sm:items-start">
-          <p id="name" class="text-lg sm:text-2xl text-orange-800 font-semibold"></p>
+          <p id="name" class="text-lg sm:text-2xl text-cyan-800 font-semibold"></p>
           <p id="bio" class="text-base sm:text-2xl text-gray-600"></p>
         </div>
       </div>
       <div id="postsList" class="mt-8 sm:mt-12 flex flex-col gap-8 sm:gap-12 px-2 sm:px-8 max-h-[32rem] sm:max-h-[40rem] overflow-y-auto w-full"></div>
     </section>
     <section class="mt-32 flex flex-col items-center px-4" id="Contact">
-      <h2 class="mb-8 text-3xl sm:text-5xl md:text-6xl font-bold tracking-tight text-orange-700">Contact</h2>
-      <form id="form" class="bg-white rounded-xl shadow-xl p-4 sm:p-8 w-full max-w-md flex flex-col gap-4 border border-orange-100">
-        <input id="contact-name" autocomplete="on" type="text" placeholder="Your Name" class="border border-orange-200 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-orange-200" required>
-        <input id="contact-email" autocomplete="on" type="email" placeholder="Your Email" class="border border-orange-200 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-orange-200" required>
-        <textarea id="contact-message" placeholder="Your Message" rows="5" class="border border-orange-200 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-orange-200 resize-none" required></textarea>
-        <button type="submit" class="self-end bg-orange-600 text-white px-6 py-2 rounded-full font-semibold hover:bg-orange-700 transition">Send</button>
+      <h2 class="mb-8 text-3xl sm:text-5xl md:text-6xl font-bold tracking-tight text-cyan-500">Contact</h2>
+      <form id="form" class="bg-white rounded-xl shadow-xl p-4 sm:p-8 w-full max-w-md flex flex-col gap-4 border border-cyan-100">
+        <input id="contact-name" autocomplete="on" type="text" placeholder="Your Name" class="border border-cyan-200 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-cyan-200" required>
+        <input id="contact-email" autocomplete="on" type="email" placeholder="Your Email" class="border border-cyan-200 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-cyan-200" required>
+        <textarea id="contact-message" placeholder="Your Message" rows="5" class="border border-cyan-200 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-cyan-200 resize-none" required></textarea>
+        <button type="submit" class="self-end bg-cyan-600 text-white px-6 py-2 rounded-full font-semibold hover:bg-cyan-700 transition">Send</button>
       </form>
     </section>
-    <footer class="w-full mt-16 py-6 bg-orange-50 text-center text-gray-400 text-xs sm:text-sm border-t border-orange-200">
+    <footer class="w-full mt-16 py-6 bg-cyan-50 text-center text-gray-400 text-xs sm:text-sm border-t border-cyan-200">
       &copy; 2025 Youdahe Asfaw
     </footer>
-    <script type="module" src="/src/main.js"></script>
     <script>
-      document.addEventListener('mousemove', (e) => {
-        const face = document.querySelector('.face');
-        if (!face) return;
-        const rect = face.getBoundingClientRect();
-        const centerX = rect.left + rect.width / 2;
-        const centerY = rect.top + rect.height / 2;
-        const dx = e.clientX - centerX;
-        const dy = e.clientY - centerY;
-        const angle = Math.atan2(dy, dx);
-        const radius = 8;
-        const pupilLeft = document.getElementById('pupil-left');
-        const pupilRight = document.getElementById('pupil-right');
-        if (pupilLeft && pupilRight) {
-          pupilLeft.style.transform = `translate(${Math.cos(angle) * radius}px, ${Math.sin(angle) * radius}px)`;
-          pupilRight.style.transform = `translate(${Math.cos(angle) * radius}px, ${Math.sin(angle) * radius}px)`;
+      const phrases = [
+        "Full stack software developer",
+        "First gen college student",
+        "Lakers fan"
+      ];
+      let currentPhrase = 0;
+      let currentChar = 0;
+      let isDeleting = false;
+      const typewriter = document.getElementById('typewriter');
+      function type() {
+        const phrase = phrases[currentPhrase];
+        if (isDeleting) {
+          currentChar--;
+          typewriter.textContent = phrase.substring(0, currentChar);
+          if (currentChar === 0) {
+            isDeleting = false;
+            currentPhrase = (currentPhrase + 1) % phrases.length;
+            setTimeout(type, 600);
+          } else {
+            setTimeout(type, 40);
+          }
+        } else {
+          currentChar++;
+          typewriter.textContent = phrase.substring(0, currentChar);
+          if (currentChar === phrase.length) {
+            isDeleting = true;
+            setTimeout(type, 1200);
+          } else {
+            setTimeout(type, 70);
+          }
         }
-      });
+      }
+      type();
     </script>
+    <script type="module" src="/src/main.js"></script>
   </body>
 </html>

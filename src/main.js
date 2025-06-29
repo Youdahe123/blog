@@ -18,9 +18,9 @@ fetch('http://localhost:3000/')
 
 
 
-// import { AboutPage } from './pages/about';
-// import { BlogPage } from './pages/blog';
-// import { ContactPage } from './pages/contact';
+import { AboutPage } from './pages/about';
+import { BlogPage } from './pages/blog';
+import { ContactPage } from './pages/contact';
 // let p = 0
 // let count = 0
 // const AboutShow = document.getElementById('About')
